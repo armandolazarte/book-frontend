@@ -43,11 +43,13 @@ const BookCreate = () => {
                     onChange={ (e) => setBookTitle(e.target.value) }
                     value={ bookTitle }
                     disabled={ submitting }
+                    data-cy="input-book-title"
                     type="text"
                 />
 
                 <button
                     disabled={ submitting }
+                    data-cy="button-submit-book"
                 >{ submitting ? 'Enviando...' : 'Enviar' }</button>
 
                 { errors.title && (
